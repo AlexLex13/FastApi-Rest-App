@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  api:
+    build: .
+    ports:
+      - 8000:8000
+    environment:
+      - DATABASE_HOSTNAME=postgres
+      - DATABASE_PORT=5432
+      - DATABASE_PASSWORD=2003ktrf10
+      - DATABASE_NAME=fastapi
+      - DATABASE_USERNAME=postgres
+      - SECRET_KEY=o498738rijndfhgvt3fy78okmjhgvcxes3w4er5drew2qw3e4dt
+      - ALGORITHM=HS256
+      - ACCESS_TOKEN_EXPIRE_MINUTES=30
+  postgres:
+    image: postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres-db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=2003ktrf10
+      - POSTGRES_DB=fastapi
+volumes:
+  postgres-db:
+  
