@@ -11,10 +11,10 @@ services:
     environment:
       - DATABASE_HOSTNAME=postgres
       - DATABASE_PORT=5432
-      - DATABASE_PASSWORD=2003ktrf10
+      - DATABASE_PASSWORD=password
       - DATABASE_NAME=fastapi
       - DATABASE_USERNAME=postgres
-      - SECRET_KEY=o498738rijndfhgvt3fy78okmjhgvcxes3w4er5drew2qw3e4dt
+      - SECRET_KEY=secret_key
       - ALGORITHM=HS256
       - ACCESS_TOKEN_EXPIRE_MINUTES=30
     depends_on:
@@ -27,7 +27,7 @@ services:
       - postgres-db:/var/lib/postgresql/data
     environment:
       - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=2003ktrf10
+      - POSTGRES_PASSWORD=password
       - POSTGRES_DB=fastapi
 volumes:
   postgres-db:
