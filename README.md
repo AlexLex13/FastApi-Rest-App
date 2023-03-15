@@ -1,0 +1,1 @@
+A REST API for writing, publishing and voting posts. Implemented registration and authorization for the user. OAuth2 and JWT are used for security. The code is covered with tests using a test framework Pytest. The application can be deployed in Docker.
